@@ -1,0 +1,43 @@
+.block {
+  border: 5px solid red;
+  max-width: 800px;
+  height: 1300px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.block div {
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.block_1 {
+  background-color: aquamarine;
+}
+.block_2 {
+  background-color: burlywood;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* top: 30px;
+  left: 20px; */
+
+  /* z-index: 1; */
+}
+
+.block_3 {
+  background-color: cadetblue;
+  /* z-index: 2;
+  position: relative; */
+}
+
+.block_4 {
+  background-color: blue;
+  color: wheat;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

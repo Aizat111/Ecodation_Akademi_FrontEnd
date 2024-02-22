@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #32a88d;
+}
+
+.center {
+  background-color: white;
+  width: 30%;
+  height: 50vh;
+  margin: 10% auto;
+  border-radius: 10px;
+}
+
+.center h1 {
+  text-align: center;
+  padding: 15px;
+  font-size: 35px;
+}
+
+.center form {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+form .txt_field {
+  position: relative;
+  margin: 20px 0;
+}
+.txt_field input {
+  width: 90%;
+  height: 35px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 30px;
+}
+.txt_field i {
+  position: relative;
+  top: 28px;
+  left: 10px;
+}
