@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { List } from "./List";
-import { Button, Col, Row } from "reactstrap";
+import { Button, Col, Row, Modal, ModalBody } from "reactstrap";
 import { FormModal } from "./FormModal";
+import axios from "axios";
 
 export const Users = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [users, setUsers] = useState([
-    { id: 1, firstname: "Emma", lastname: "Smith" },
-  ]);
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    //çalıştırmak istediğimiz kod
+    axios("https://jsonplaceholder.typicode.com/users").then(({ data }) =>
+      setUsers(data)
+    );
+  }, []);
   return (
     <div>
       <Row className="mt-2">
@@ -31,13 +36,16 @@ export const Users = () => {
       </Row>
 
       <List users={users} />
-      {isVisible && (
-        <FormModal
-          users={users}
-          setUsers={setUsers}
-          setIsVisible={setIsVisible}
-        />
-      )}
+      <Modal isOpen={isVisible}>
+        <ModalBody>
+          {" "}
+          <FormModal
+            users={users}
+            setUsers={setUsers}
+            setIsVisible={setIsVisible}
+          />
+        </ModalBody>
+      </Modal>
     </div>
   );
 };

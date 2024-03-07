@@ -8,8 +8,9 @@ export const List = ({ users }) => {
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
@@ -17,8 +18,9 @@ export const List = ({ users }) => {
             return (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.firstname}</td>
-                <td>{user.lastname}</td>
+                <td>{user.name}</td>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
               </tr>
             );
           })}
