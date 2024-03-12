@@ -27,7 +27,19 @@ export const Navbar = () => {
             };
           }}
         >
-          <li>About</li>
+          <li className="me-3">About</li>
+        </NavLink>
+        <NavLink
+          to="users"
+          style={({ isActive, isPending, isTransitioning }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              color: isPending ? "red" : "black",
+              viewTransitionName: isTransitioning ? "slide" : "",
+            };
+          }}
+        >
+          <li>Users</li>
         </NavLink>
       </ul>
     </div>
